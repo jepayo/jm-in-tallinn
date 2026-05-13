@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
 :root{--ink:#1a1714;--paper:#f5f0e8;--cream:#ede8dc;--ok:#2d6a4f;--ok-bg:#d8f3dc;--muted:#8a8070;--accent:#c9842a;--border:#d8d0c0;}
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -83,12 +84,10 @@ a.mr:hover{background:#d0eeda;}
 </div>
 
 <!-- ═══════════════ VIERNES ═══════════════ -->
-
 <div id="vie" class="day active">
   <div class="day-intro">Día 1 — llegada anoche a la 1h, arrancamos despacio</div>
 
   <!-- DESAYUNO -->
-
   <div class="block">
     <div class="time">10h</div>
     <div class="dot" style="background:#8a8070"></div>
@@ -112,7 +111,6 @@ a.mr:hover{background:#d0eeda;}
   </div>
 
   <!-- TOOMPEA -->
-
   <div class="block">
     <div class="time">11–13h</div>
     <div class="dot" style="background:#534AB7"></div>
@@ -141,7 +139,6 @@ a.mr:hover{background:#d0eeda;}
   </div>
 
   <!-- III DRAAKON -->
-
   <div class="block">
     <div class="time">12:30h</div>
     <div class="dot" style="background:#993C1D"></div>
@@ -169,7 +166,6 @@ a.mr:hover{background:#d0eeda;}
   </div>
 
   <!-- RADO -->
-
   <div class="block confirmed">
     <div class="badge ok">✓ Confirmado</div>
     <div class="time">13:30–15h</div>
@@ -196,7 +192,6 @@ a.mr:hover{background:#d0eeda;}
   </div>
 
   <!-- BOLT OFFICES -->
-
   <div class="block">
     <div class="time">15–16h</div>
     <div class="dot" style="background:#34A853"></div>
@@ -220,7 +215,6 @@ a.mr:hover{background:#d0eeda;}
   </div>
 
   <!-- ROTERMANN + TELLISKIVI -->
-
   <div class="block">
     <div class="time">16–18h</div>
     <div class="dot" style="background:#3B6D11"></div>
@@ -247,7 +241,6 @@ a.mr:hover{background:#d0eeda;}
   </div>
 
   <!-- GAP VIERNES -->
-
   <div class="block" style="border-style:dashed;background:var(--paper);">
     <div class="time">18–21h</div>
     <div class="dot" style="background:#d8d0c0"></div>
@@ -265,7 +258,6 @@ a.mr:hover{background:#d0eeda;}
   <div class="divider">Cena confirmada ↓</div>
 
   <!-- R14 -->
-
   <div class="block confirmed">
     <div class="badge ok">✓ Confirmado</div>
     <div class="time">21:00</div>
@@ -290,12 +282,10 @@ a.mr:hover{background:#d0eeda;}
 </div>
 
 <!-- ═══════════════ SÁBADO ═══════════════ -->
-
 <div id="sab" class="day">
   <div class="day-intro">Día 2 — el día más completo. Historia, jardines, playa y cena con vistas</div>
 
   <!-- SANTA CATALINA -->
-
   <div class="block">
     <div class="time">9–11h</div>
     <div class="dot" style="background:#8a8070"></div>
@@ -321,7 +311,6 @@ a.mr:hover{background:#d0eeda;}
   </div>
 
   <!-- KGB MUSEUM -->
-
   <div class="block confirmed">
     <div class="badge ok">✓ Confirmado</div>
     <div class="time">11:15h</div>
@@ -348,7 +337,6 @@ a.mr:hover{background:#d0eeda;}
   </div>
 
   <!-- PASAJES BASTIÓN -->
-
   <div class="block">
     <div class="time">12:15–13:15h</div>
     <div class="dot" style="background:#7B3F8C"></div>
@@ -376,7 +364,6 @@ a.mr:hover{background:#d0eeda;}
   </div>
 
   <!-- KOMPRESSOR -->
-
   <div class="block">
     <div class="time">13:30–14:30h</div>
     <div class="dot" style="background:#8a8070"></div>
@@ -400,7 +387,6 @@ a.mr:hover{background:#d0eeda;}
   </div>
 
   <!-- KADRIORG -->
-
   <div class="block">
     <div class="time">15:30–17h</div>
     <div class="dot" style="background:#3B6D11"></div>
@@ -428,7 +414,6 @@ a.mr:hover{background:#d0eeda;}
   </div>
 
   <!-- PIRITA -->
-
   <div class="block">
     <div class="time">17–19h</div>
     <div class="dot" style="background:#378ADD"></div>
@@ -457,7 +442,6 @@ a.mr:hover{background:#d0eeda;}
   <div class="divider">Cena confirmada ↓</div>
 
   <!-- HORISONT -->
-
   <div class="block confirmed">
     <div class="badge ok">✓ Confirmado</div>
     <div class="time">21:00</div>
@@ -484,12 +468,10 @@ a.mr:hover{background:#d0eeda;}
 </div>
 
 <!-- ═══════════════ DOMINGO ═══════════════ -->
-
 <div id="dom" class="day">
   <div class="day-intro">Día 3 — ✈️ vuelo 13:40h · Bolt al aeropuerto 20-25 min desde el Airbnb</div>
 
   <!-- CAFE DOMINGO -->
-
   <div class="block">
     <div class="time">9–10h</div>
     <div class="dot" style="background:#8a8070"></div>
@@ -516,7 +498,6 @@ a.mr:hover{background:#d0eeda;}
   </div>
 
   <!-- SAN OLAF -->
-
   <div class="block">
     <div class="time">10–11h</div>
     <div class="dot" style="background:#534AB7"></div>
@@ -541,7 +522,6 @@ a.mr:hover{background:#d0eeda;}
   </div>
 
   <!-- CHECKOUT -->
-
   <div class="block">
     <div class="time">11–11:45h</div>
     <div class="dot" style="background:#8a8070"></div>
@@ -557,7 +537,6 @@ a.mr:hover{background:#d0eeda;}
   </div>
 
   <!-- AEROPUERTO -->
-
   <div class="block confirmed">
     <div class="badge ok">✓</div>
     <div class="time">12:15h</div>
@@ -590,7 +569,6 @@ a.mr:hover{background:#d0eeda;}
 </div>
 
 <!-- ═══════════════ EXTRAS ═══════════════ -->
-
 <div id="extras" class="day">
   <div class="day-intro">Opciones valoradas para este viaje</div>
 
@@ -652,7 +630,6 @@ a.mr:hover{background:#d0eeda;}
 </div>
 
 <!-- ═══════════════ ANTES DE IR ═══════════════ -->
-
 <div id="saber" class="day">
   <div class="day-intro">Lo que necesitáis saber antes de llegar</div>
 
@@ -738,7 +715,6 @@ a.mr:hover{background:#d0eeda;}
 </div>
 
 <!-- ═══════════════ MAPAS ═══════════════ -->
-
 <div id="mapas" class="day">
   <div class="day-intro">Mapas interactivos por día — funciona en GitHub Pages</div>
 
@@ -761,93 +737,90 @@ a.mr:hover{background:#d0eeda;}
   </div>
 </div>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 var mapsInited = false;
 
 function show(id,btn){
-document.querySelectorAll(’.day’).forEach(d=>d.classList.remove(‘active’));
-document.querySelectorAll(’.tab’).forEach(t=>t.classList.remove(‘active’));
-document.getElementById(id).classList.add(‘active’);
-btn.classList.add(‘active’);
-if(id===‘mapas’) setTimeout(initMaps, 100);
+  document.querySelectorAll('.day').forEach(d=>d.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+  if(id==='mapas') setTimeout(initMaps, 100);
 }
 
 function tog(btn){
-btn.classList.toggle(‘open’);
-var full=btn.nextElementSibling;
-full.classList.toggle(‘visible’);
+  btn.classList.toggle('open');
+  var full=btn.nextElementSibling;
+  full.classList.toggle('visible');
 }
 
 function initMaps(){
-if(mapsInited) return;
-mapsInited = true;
+  if(mapsInited) return;
+  mapsInited = true;
 
-var tiles = ‘https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png’;
-var attr  = ‘© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>’;
+  var tiles = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+  var attr  = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
 
-// ── VIERNES ──
-var vie = L.map(‘map-vie’).setView([59.4390, 24.7480], 13);
-L.tileLayer(tiles,{attribution:attr,maxZoom:19}).addTo(vie);
-var ptsVie = [
-{c:[59.43741,24.77364], t:‘Inicio’,  l:‘🏠 Airbnb’},
-{c:[59.4370,24.7454],   t:‘10h’,     l:‘☕ Desayuno — Plaza Ayuntamiento’},
-{c:[59.4365,24.7389],   t:‘11h’,     l:‘⛪ Catedral Nevski / Toompea’},
-{c:[59.4370,24.7454],   t:‘12:30h’,  l:‘🍺 III Draakon’},
-{c:[59.4368,24.7475],   t:‘13:30h’,  l:‘🍽 Rado Restoran’},
-{c:[59.4298,24.7652],   t:‘15h’,     l:‘⚡ Bolt HQ — Vana-Lõuna 34’},
-{c:[59.4363,24.7558],   t:‘16h’,     l:‘🏭 Rotermann’},
-{c:[59.4378,24.7251],   t:‘16:30h’,  l:‘🎨 Telliskivi’},
-{c:[59.4363,24.7558],   t:‘21h’,     l:‘🍷 R14 — Cena confirmada’},
-];
-addPoints(vie, ptsVie, ‘#c0392b’);
+  // ── VIERNES ──
+  var vie = L.map('map-vie').setView([59.4390, 24.7480], 13);
+  L.tileLayer(tiles,{attribution:attr,maxZoom:19}).addTo(vie);
+  var ptsVie = [
+    {c:[59.43741,24.77364], t:'Inicio',  l:'🏠 Airbnb'},
+    {c:[59.4370,24.7454],   t:'10h',     l:'☕ Desayuno — Plaza Ayuntamiento'},
+    {c:[59.4365,24.7389],   t:'11h',     l:'⛪ Catedral Nevski / Toompea'},
+    {c:[59.4370,24.7454],   t:'12:30h',  l:'🍺 III Draakon'},
+    {c:[59.4368,24.7475],   t:'13:30h',  l:'🍽 Rado Restoran'},
+    {c:[59.4298,24.7652],   t:'15h',     l:'⚡ Bolt HQ — Vana-Lõuna 34'},
+    {c:[59.4363,24.7558],   t:'16h',     l:'🏭 Rotermann'},
+    {c:[59.4378,24.7251],   t:'16:30h',  l:'🎨 Telliskivi'},
+    {c:[59.4363,24.7558],   t:'21h',     l:'🍷 R14 — Cena confirmada'},
+  ];
+  addPoints(vie, ptsVie, '#c0392b');
 
-// ── SÁBADO ──
-var sab = L.map(‘map-sab’).setView([59.4430, 24.7700], 12);
-L.tileLayer(tiles,{attribution:attr,maxZoom:19}).addTo(sab);
-var ptsSab = [
-{c:[59.4354,24.7481],  t:‘9h’,      l:‘🧵 Katariina käik’},
-{c:[59.4368,24.7531],  t:‘11:15h’,  l:‘🕵️ KGB Museum — Hotel Viru’},
-{c:[59.4348,24.7412],  t:‘12:15h’,  l:‘🕳 Pasajes Bastión’},
-{c:[59.4360,24.7451],  t:‘13:30h’,  l:‘🥞 Kompressor’},
-{c:[59.4378,24.7914],  t:‘15:30h’,  l:‘🏛 Kadriorg + Palacio’},
-{c:[59.4647,24.8328],  t:‘17h’,     l:‘🏖 Pirita Beach’},
-{c:[59.4350,24.7614],  t:‘21h’,     l:‘🌅 Horisont — Cena confirmada’},
-];
-addPoints(sab, ptsSab, ‘#1a5276’);
+  // ── SÁBADO ──
+  var sab = L.map('map-sab').setView([59.4430, 24.7700], 12);
+  L.tileLayer(tiles,{attribution:attr,maxZoom:19}).addTo(sab);
+  var ptsSab = [
+    {c:[59.4354,24.7481],  t:'9h',      l:'🧵 Katariina käik'},
+    {c:[59.4368,24.7531],  t:'11:15h',  l:'🕵️ KGB Museum — Hotel Viru'},
+    {c:[59.4348,24.7412],  t:'12:15h',  l:'🕳 Pasajes Bastión'},
+    {c:[59.4360,24.7451],  t:'13:30h',  l:'🥞 Kompressor'},
+    {c:[59.4378,24.7914],  t:'15:30h',  l:'🏛 Kadriorg + Palacio'},
+    {c:[59.4647,24.8328],  t:'17h',     l:'🏖 Pirita Beach'},
+    {c:[59.4350,24.7614],  t:'21h',     l:'🌅 Horisont — Cena confirmada'},
+  ];
+  addPoints(sab, ptsSab, '#1a5276');
 
-// ── DOMINGO ──
-var dom = L.map(‘map-dom’).setView([59.4370, 24.7600], 13);
-L.tileLayer(tiles,{attribution:attr,maxZoom:19}).addTo(dom);
-var ptsDom = [
-{c:[59.43741,24.77364], t:‘9h’,     l:‘🏠 Airbnb’},
-{c:[59.4370,24.7454],   t:‘9:08h’,  l:‘☕ Plaza Ayuntamiento’},
-{c:[59.4375,24.7462],   t:‘9:30h’,  l:‘🏛 Casa Cabezas Negras — Pikk 26’},
-{c:[59.4406,24.7452],   t:‘10h’,    l:‘🗼 Torre San Olaf’},
-{c:[59.43741,24.77364], t:‘11h’,    l:‘🏠 Airbnb — checkout’},
-{c:[59.4133,24.8328],   t:‘12:15h’, l:‘✈️ Aeropuerto Tallinn’},
-];
-addPoints(dom, ptsDom, ‘#1e8449’);
+  // ── DOMINGO ──
+  var dom = L.map('map-dom').setView([59.4370, 24.7600], 13);
+  L.tileLayer(tiles,{attribution:attr,maxZoom:19}).addTo(dom);
+  var ptsDom = [
+    {c:[59.43741,24.77364], t:'9h',     l:'🏠 Airbnb'},
+    {c:[59.4370,24.7454],   t:'9:08h',  l:'☕ Plaza Ayuntamiento'},
+    {c:[59.4375,24.7462],   t:'9:30h',  l:'🏛 Casa Cabezas Negras — Pikk 26'},
+    {c:[59.4406,24.7452],   t:'10h',    l:'🗼 Torre San Olaf'},
+    {c:[59.43741,24.77364], t:'11h',    l:'🏠 Airbnb — checkout'},
+    {c:[59.4133,24.8328],   t:'12:15h', l:'✈️ Aeropuerto Tallinn'},
+  ];
+  addPoints(dom, ptsDom, '#1e8449');
 }
 
 function addPoints(map, pts, color){
-var latlngs = pts.map(function(p){ return p.c; });
-L.polyline(latlngs, {color:color, weight:2.5, opacity:0.7, dashArray:‘6,5’}).addTo(map);
-pts.forEach(function(p,i){
-var icon = L.divIcon({
-className: ‘’,
-html: ‘<div style="background:'+color+';color:white;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;border:2px solid white;box-shadow:0 1px 5px rgba(0,0,0,0.35);font-family:sans-serif;">’+(i+1)+’</div>’,
-iconSize:[28,28],
-iconAnchor:[14,14],
-popupAnchor:[0,-14]
-});
-L.marker(p.c, {icon:icon})
-.addTo(map)
-.bindPopup(’<strong>’+p.t+’</strong><br>’+p.l, {maxWidth:200});
-});
+  var latlngs = pts.map(function(p){ return p.c; });
+  L.polyline(latlngs, {color:color, weight:2.5, opacity:0.7, dashArray:'6,5'}).addTo(map);
+  pts.forEach(function(p,i){
+    var icon = L.divIcon({
+      className: '',
+      html: '<div style="background:'+color+';color:white;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;border:2px solid white;box-shadow:0 1px 5px rgba(0,0,0,0.35);font-family:sans-serif;">'+(i+1)+'</div>',
+      iconSize:[28,28],
+      iconAnchor:[14,14],
+      popupAnchor:[0,-14]
+    });
+    L.marker(p.c, {icon:icon})
+      .addTo(map)
+      .bindPopup('<strong>'+p.t+'</strong><br>'+p.l, {maxWidth:200});
+  });
 }
 </script>
-
 </body>
 </html>
